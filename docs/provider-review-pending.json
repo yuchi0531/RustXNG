@@ -1006,6 +1006,11 @@
       "module": "valkey_server",
       "base_url": "",
       "search_url": ""
+    },
+    "yodobashi": {
+      "module": "yodobashi",
+      "base_url": "",
+      "search_url": "https://www.yodobashi.com/?word={query}"
     }
   }
 }

@@ -257,6 +257,7 @@ pub mod yandex;
 pub mod yandex_api;
 pub mod yandex_music;
 pub mod yep;
+pub mod yodobashi;
 pub mod zlibrary;
 
 use crate::engine::EngineHandle;
@@ -506,6 +507,7 @@ pub fn build(config: &EngineConfig) -> Result<EngineHandle, String> {
         "sqlite" => sqlite::Sqlite::from_config(config)?,
         #[cfg(feature = "db-engines")]
         "valkey_server" => valkey_server::ValkeyServer::from_config(config)?,
+        "yodobashi" => yodobashi::Yodobashi::from_config(config)?,
         other => {
             return Err(format!(
                 "engine {:?} uses the unknown engine type {other:?}",

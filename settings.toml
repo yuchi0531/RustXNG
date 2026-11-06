@@ -2431,3 +2431,14 @@ shortcut = "bjp"
 categories = ["general", "web"]
 mkt = "ja-JP"
 disabled = true
+
+# ヨドバシ.com (yodobashi.com) product search. The engine scrapes the HTML
+# search page (48 tiles per page, /p2/ for page 2); HTML automation for this
+# host has no recorded permission, see docs/PROVIDERS.md.
+[[engines]]
+name = "yodobashi"
+engine = "yodobashi"
+shortcut = "yod"
+categories = ["shopping"]
+paging = true
+disabled = true  # Disabled until endpoint/use conditions are reviewed.
